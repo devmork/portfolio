@@ -33,12 +33,14 @@
     "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.1.13",
+    "tech-stack-icons": "^3.3.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^20.1.6",
     "@angular/cli": "^20.1.6",
     "@angular/compiler-cli": "^20.1.0",
+    "@spartan-ng/cli": "^0.0.1-alpha.511",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
