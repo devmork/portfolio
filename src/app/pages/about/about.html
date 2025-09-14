@@ -1,0 +1,80 @@
+<div>
+  <h1>About</h1>
+  <p>A brief introduction to who I am</p>
+  <div class="my-2 border-t border-gray-300 dark:border-gray-700"></div>
+  <br />
+  <div>
+    <p>
+      Hello there! I'm a 20-year-old developer from the Philippines, currently studying Information
+      Technology at DMC College Foundation. I’m passionate about making software that’s simple,
+      helpful, and easy to use. I enjoy working across different platforms and technologies, always
+      aiming to create tools that solve real problems and make everyday tasks easier. Whether it's
+      designing clean user interfaces or troubleshooting code, I focus on clarity, usefulness, and
+      making things work smoothly.
+    </p>
+  </div>
+  <br />
+
+  <div>
+    <p>
+      I love learning through hands-on experience especially when it involves coding challenges,
+      community projects, or exploring new frameworks like Angular, MAUI, and ASP.NET Core. I
+      believe that good software isn’t just about writing code it’s about understanding people’s
+      needs and building solutions that truly help. That’s why I care deeply about user centered
+      design and clean architecture, making sure everything I build is easy to understand and
+      maintain.
+    </p>
+  </div>
+  <br />
+
+  <div>
+    <p>
+      Beyond the technical side, I enjoy sharing knowledge and helping others grow. I thrive in
+      friendly, collaborative environments where ideas flow freely and learning never stops. Whether
+      I’m working solo or with a team, I bring a practical mindset, a positive attitude, and a drive
+      to turn ideas into meaningful results.
+    </p>
+  </div>
+  <br />
+
+  <div>
+    <p>Best regrards,</p>
+  </div>
+  <div>
+    <p>Den</p>
+  </div>
+</div>
+<div class="my-2 border-t border-gray-300 dark:border-gray-700"></div>
+
+<div>
+  <h1 class="text-xl text-white font-medium flex items-center gap-2">
+    <i class="ri-graduation-cap-line"></i> Education
+  </h1>
+  <p class="text-gray-300 mb-6">My educational journey.</p>
+  @for (education of educations; track $index) {
+  <div class="flex items-center bg-[#18191c] rounded-xl border border-[#222] p-5 max-w-3xl mb-4">
+    <!-- University Logo -->
+    <div class="flex-shrink-0">
+      <img
+        [src]="education.img"
+        alt="School Logo"
+        class="w-20 h-20 rounded-lg bg-white object-contain"
+      />
+    </div>
+    <!-- Info -->
+    <div class="ml-6 flex flex-col">
+      <span class="text-white font-semibold text-lg">{{ education.school }}</span>
+      <span class="text-gray-300 text-base mt-1">
+        {{ education.level }} &bull; {{ education.course }}
+      </span>
+      <div class="flex items-center gap-2 mt-2 text-gray-400 text-sm">
+        <span>{{ education.graduated }}</span>
+        <span>&bull;</span>
+        <span class="font-semibold text-gray-300">
+          {{ education.address }}
+        </span>
+      </div>
+    </div>
+  </div>
+  }
+</div>
