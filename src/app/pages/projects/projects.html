@@ -1,1 +1,53 @@
-<p>projects works!</p>
+<div class="w-3/5">
+  <h1 class="text-2xl font-semibold text-white mb-1">Projects</h1>
+  <p class="text-gray-400 mb-6">A showcase of the projects I've built and contributed to.</p>
+  <div class="border-t border-dashed border-gray-600 my-6"></div>
+
+  @for (project of projects; track $index) {
+  <div
+    class="w-full max-w-3xl rounded-xl bg-[#18191c] border border-[#222] overflow-hidden flex flex-row shadow-lg m-2"
+  >
+    <!-- Left: Project Image/Preview -->
+    <div
+      class="w-2/5 bg-gradient-to-b from-gray-800 to-gray-700 flex flex-col items-center justify-center"
+    >
+      <img [src]="project.img" class="rounded-lg object-cover w-full h-full" />
+    </div>
+    <!-- Right: Project Details -->
+    <div class="w-3/5 flex flex-col justify-between p-6">
+      <div>
+        <h2 class="text-white text-xl font-semibold mb-2">
+          {{ project.name }}
+        </h2>
+        <p class="text-gray-300 mb-4 text-sm">
+          {{ project.description }}
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          @for (tech of project.technologies; track $index) {
+          <span class="px-3 py-1 rounded bg-[#23272b] text-gray-200 text-xs font-medium">
+            {{ tech }}
+          </span>
+          }
+        </div>
+      </div>
+      <div class="flex gap-3 mt-4">
+        <a
+          [href]="project.repository"
+          target="_blank"
+          class="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+          >See repository</a
+        >
+
+        @if (project.website) {
+        <a
+          [href]="project.website"
+          target="_blank"
+          class="px-4 py-2 rounded-lg bg-gray-700 text-white font-semibold hover:bg-gray-800 transition"
+          >See live</a
+        >
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>
