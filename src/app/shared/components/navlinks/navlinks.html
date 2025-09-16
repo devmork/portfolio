@@ -1,12 +1,16 @@
-<nav class="flex flex-col justify-center">
-  @for (page of pages; track $index) {
-  <ul class="menu">
-    <li class="flex flex-row">
-      <i [class]="page.icon"></i>
-      <a [routerLink]="page.routeLink" routerLinkActive="active" class="text-base">
-        {{ page.label }}
-      </a>
-    </li>
-  </ul>
-  }
-</nav>
+<div class="flex flex-col gap-y-1 justify-center items-center">
+  <nav>
+    @for (page of pages; track $index) {
+    <a [routerLink]="page.routeLink" routerLinkActive="active" class="text-lg">
+      <div class="flex gap-x-2">
+        <div>
+          <i [class]="page.icon"></i>
+        </div>
+        <div>
+          {{ page.label }}
+        </div>
+      </div>
+    </a>
+    }
+  </nav>
+</div>
