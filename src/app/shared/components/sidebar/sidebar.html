@@ -1,17 +1,5 @@
 <aside>
   <app-avatar></app-avatar>
-  <!-- Navigation -->
-  <nav class="flex flex-col">
-    @for (page of pages; track $index) {
-    <ul class="menu">
-      <li class="flex flex-row">
-        <i [class]="page.icon"></i>
-        <a [routerLink]="page.routeLink" routerLinkActive="active" class="text-base">
-          {{ page.label }}
-        </a>
-      </li>
-    </ul>
-    }
-  </nav>
+  <app-navlinks></app-navlinks>
   <app-footer></app-footer>
 </aside>
