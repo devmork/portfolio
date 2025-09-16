@@ -1,8 +1,8 @@
-<div class="flex items-center">
-  <div>
+<div class="flex flex-row px-20 py-15">
+  <header class="basis-128">
     <app-sidebar></app-sidebar>
-  </div>
-  <div>
-    <app-main></app-main>
-  </div>
+  </header>
+  <main class="basis-256">
+    <router-outlet></router-outlet>
+  </main>
 </div>
