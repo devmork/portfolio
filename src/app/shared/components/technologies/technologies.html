@@ -1,6 +1,12 @@
-@for (tech of technologies; track $index) {
-<div class="flex items-center bg-black rounded-xl border border-[#222] px-4 py-2">
-  <img class="text-white font-semibold text-sm" [src]="tech.icon" />
-  <span class="mr-2">{{ tech.name }}</span>
+<div class="rounded-xl">
+  <div class="flex flex-wrap">
+    @for (tech of technologies; track $index) {
+    <div
+      class="flex items-center rounded-xl border border-[#222] bg-neutral px-4 py-2 w-fit gap-2 m-1"
+    >
+      <img [src]="tech.png" alt="{{ tech.name }}" class="w-7 h-7 object-contain mr-2" />
+      <span class="text-white font-semibold text-base">{{ tech.name }}</span>
+    </div>
+    }
+  </div>
 </div>
-}
