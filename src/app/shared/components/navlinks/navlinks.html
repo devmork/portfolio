@@ -1,7 +1,7 @@
 <div class="flex flex-col gap-y-1 justify-center items-center mb-10">
   <nav>
     @for (page of pages; track $index) {
-    <a [routerLink]="page.routeLink" routerLinkActive="active" class="text-xl">
+    <a [routerLink]="page.routeLink" routerLinkActive="active" class="text-lg">
       <div class="flex gap-x-3">
         <div>
           <i [class]="page.icon"></i>
