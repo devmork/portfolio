@@ -1,0 +1,28 @@
+<div>
+  @for (education of educations; track $index) {
+  <div class="flex items-center bg-[#18191c] rounded-xl border border-[#222] p-5 max-w-3xl mb-4">
+    <!-- University Logo -->
+    <div class="flex-shrink-0">
+      <img
+        [src]="education.img"
+        alt="School Logo"
+        class="w-20 h-20 rounded-lg bg-white object-contain"
+      />
+    </div>
+    <!-- Info -->
+    <div class="ml-6 flex flex-col">
+      <span class="text-white font-semibold text-lg">{{ education.school }}</span>
+      <span class="text-gray-300 text-base mt-1">
+        {{ education.level }} &bull; {{ education.course }}
+      </span>
+      <div class="flex items-center gap-2 mt-2 text-gray-400 text-sm">
+        <span>{{ education.graduated }}</span>
+        <span>&bull;</span>
+        <span class="font-semibold text-gray-300">
+          {{ education.address }}
+        </span>
+      </div>
+    </div>
+  </div>
+  }
+</div>
