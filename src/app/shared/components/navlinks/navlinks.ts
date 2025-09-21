@@ -3,6 +3,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navlinks',
+  standalone: true,
   imports: [RouterLink, RouterModule],
   templateUrl: './navlinks.html',
   styleUrl: './navlinks.css',

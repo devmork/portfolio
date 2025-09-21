@@ -10,4 +10,11 @@ import { Navlinks } from '../navlinks/navlinks';
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
 })
-export class Sidebar {}
+export class Sidebar {
+  closeDrawer() {
+    const drawerToggle = document.getElementById('my-drawer-2') as HTMLInputElement;
+    if (drawerToggle) {
+      drawerToggle.checked = false;
+    }
+  }
+}
