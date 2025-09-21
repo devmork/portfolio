@@ -1,14 +1,37 @@
-<div class="flex flex-col gap-y-1 justify-center items-center mb-10">
-  <nav>
+<div class="flex flex-col gap-4 justify-center items-center mb-10">
+  <nav class="w-full">
     @for (page of pages; track $index) {
-    <a [routerLink]="page.routeLink" routerLinkActive="active" class="text-lg">
-      <div class="flex gap-x-3">
-        <div>
-          <i [class]="page.icon"></i>
+    <a
+      [routerLink]="page.routeLink"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="text-lg block p-3 rounded-lg transition-colors duration-200 hover:bg-base-300"
+      #rla="routerLinkActive"
+      [class.bg-base-300]="rla.isActive"
+    >
+      <div class="flex gap-x-3 items-center justify-between">
+        <div class="flex gap-x-3 items-center">
+          <div>
+            <i [class]="page.icon"></i>
+          </div>
+          <div>
+            {{ page.label }}
+          </div>
         </div>
-        <div>
-          {{ page.label }}
+
+        <!-- Arrow indicator - only show when active -->
+        @if (rla.isActive) {
+        <div class="transition-all duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
         </div>
+        }
       </div>
     </a>
     }

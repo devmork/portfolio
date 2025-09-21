@@ -1,0 +1,31 @@
+.menu-item-active {
+  @apply bg-primary text-primary-content font-semibold shadow-lg;
+}
+
+.menu-item-active .group-hover\\:-rotate-12 {
+  @apply animate-bounce;
+}
+
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}
+
+/* Enhanced hover effects */
+.group:hover .w-2.h-2 {
+  @apply scale-125;
+}
+
+/* Smooth icon transitions */
+.group:hover i {
+  @apply text-primary;
+}
