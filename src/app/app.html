@@ -1,8 +1,9 @@
-<div class="flex flex-row px-20 py-15 justify-center h-dvh">
-  <header class="basis-64 border border-red-500 flex items-center justify-center">
+<div class="mx-auto max-w-7xl lg:px-12">
+  <div class="mx-auto flex flex-col lg:flex-row lg:gap-5 lg:py-4">
     <app-sidebar></app-sidebar>
-  </header>
-  <main class="basis-256 border border-red-500 flex items-center">
-    <router-outlet></router-outlet>
-  </main>
+
+    <main class="max-w-[854px] transition-all duration-300 lg:w-4/5">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>
